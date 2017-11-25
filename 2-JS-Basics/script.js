@@ -149,6 +149,30 @@ switch (job) {
 // in switch statements you must manually tell it to break if
 // it hits the condition or it'll keep running through other optiong
 
+// Coding Challenge:
+
+var joelHeight = 75;
+var joelAge = 36;
+var angelaHeight = 63;
+var angelaAge = 30;
+var jamesHeight = 66;
+var jamesAge = 14;
+
+var joelScore = (joelHeight + joelAge * 5);
+var angelaScore = (angelaHeight + angelaAge * 5);
+var jamesScore = (jamesHeight + jamesAge * 5);
+
+console.log(joelScore + ': Joels Score');
+console.log(angelaScore + ': Angelas Score');
+console.log(jamesScore + ': James Score');
+
+if (joelScore > angelaScore && joelScore > jamesScore) {
+  console.log('Joel is the Winner!');
+} else if (angelaScore > joelScore && angelaScore > jamesScore) {
+  console.log('Angela is the Winner!');
+} else if (jamesScore > angelaScore && jamesScore > joelScore) {
+  console.log('James is the Winner!');
+}
 
 
 
