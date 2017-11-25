@@ -265,22 +265,107 @@ if (john.indexOf('teacher') === -1) {
 */
 
 
+///////////////////////////////////////////////////////////////
+// Lecture: Objects
+// Objects have Key - Value pairs. Unordered.
+/*
+var john = {
+  name: 'John',
+  lastName: 'Smith',
+  yearOfBirth: 1990,
+  job: 'Teacher',
+  isMarried: false
+}
+
+console.log(john);
+console.log(john.name + ' ' + john.lastName);
+console.log(john['name'] + ' ' + john['lastName']);
+
+var xyz = 'job';
+console.log(john[xyz]);
+// this will output job from hash/object
+
+john.lastName = 'Miller';
+john['job'] = 'Programmer'
+;
+
+console.log(john)
+console.log(john[xyz]);
+
+// Make a new object
+var jane = new Object();
+jane.name = 'Jane';
+jane.lastName = 'Smith';
+jane['yearOfBirth'] = 1969;
+jane['job'] = 'Retired';
+jane['isMarried'] = true;
+
+console.log(jane);
+*/
 
 
+///////////////////////////////////////////////////////////////////
+// Lecture: Objects and methods
+/*
+var john = {
+  name: 'John',
+  lastName: 'Smith',
+  yearOfBirth: 1990,
+  job: 'Teacher',
+  isMarried: false,
+  family: ['Jane', 'Mark', 'Bob'],
+  calculateAge: function(yearOfBirth) {
+      //this is a function experssion becasue we have a variable name / key we can call on
+      return 2016 - yearOfBirth;
+  }
+};
+
+console.log(john);
+console.log(john.calculateAge(1990));
+console.log(john.calculateAge(john.yearOfBirth));
+// this is  little stupid. we need it to reference the yearOfBirth in the Object
+
+var john = {
+  name: 'John',
+  lastName: 'Smith',
+  yearOfBirth: 1990,
+  job: 'Teacher',
+  isMarried: false,
+  family: ['Jane', 'Mark', 'Bob'],
+  calculateAge: function() {
+      // 'this' means the current object you are working inside of
+      return 2016 - this.yearOfBirth;
+  }
+};
+
+// you still need to do the empty perenthesis for your method call with no arguments
+console.log(john.calculateAge());
+var age = john.calculateAge();
+// now we add the age to the object!
+john.age = age;
+console.log(john);
 
 
+// we should really just make the age attribute right away.
+var john = {
+  name: 'John',
+  lastName: 'Smith',
+  yearOfBirth: 1990,
+  job: 'Teacher',
+  isMarried: false,
+  family: ['Jane', 'Mark', 'Bob'],
+  calculateAge: function() {
+      this.age = 2016 - this.yearOfBirth;
+  }
+};
 
+john.calculateAge();
+console.log(john)
+console.log(john.age)
+*/
 
-
-
-
-
-
-
-
-
-
-
+////////////////////////////////////////////////////////////////////////////////
+// Lecture: Loops and Iterations
 
 
 
