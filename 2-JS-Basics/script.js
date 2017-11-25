@@ -365,9 +365,102 @@ console.log(john.age)
 */
 
 ////////////////////////////////////////////////////////////////////////////////
-// Lecture: Loops and Iterations
+// Lecture: Loops
+/*
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+// ^^^ What's that doing?
+// 0, true, print 0, update i to 1
+// 1, true, print 1, update i to 2
+// 2, true, print 2, update i to 3
+// ......
+// ......
+// 9, true, print 9, update i to 10
+// 10, FALSE, end loop!
+
+*/
+
+/*
+// for loops:
+var names = ['John', 'Jane', 'Mark', 'Mary', 'Bob'];
+
+//// iterating 1
+for (var i = 0; i < 5; i++) {
+  console.log(names[i]);
+}
+//// iterating 2
+for (var i = 0; i < names.length; i++) {
+  console.log(names[i]);
+}
+//// iterating backwards
+for (var i = names.length -1; i >= 0; i--) {
+  console.log(names[i]);
+}
+*/
+
+/*
+// while loops:
+var names = ['John', 'Jane', 'Mark', 'Mary', 'Bob'];
+
+var i = 0;
+while(i < names.length) {
+  console.log(names[i]);
+  i++;
+}
+
+for (var i=0; i <= 5; i++) {
+  console.log(i);
+
+  if (i === 3) {
+    break;
+    /// break means "stop the loop if you meet this condition! Will stop at 3"
+  }
+}
+
+for (var i=0; i <= 5; i++) {
+  if (i === 3) {
+    continue;
+    /// continue means "skip over this one if the condition is met. will not print 3"
+  }
+  console.log(i);
+}
+
+*/
 
 
+////////////////////////////////////////////////////////////////
+// Coding Challenge 2!!! OH SNAP!
+
+
+/*
+function printFullAge(years) {
+  var ages = [];
+  var fullAges = [];
+
+  for (var i = 0; i < years.length; i++) {
+    ages[i] = 2016 - years[i];
+  }
+
+  for (i = 0; i < ages.length; i++) {
+    if (ages[i] >= 18) {
+      console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old and is of full age.');
+      fullAges.push(true);
+    } else {
+      console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old and is NOT of full age.');
+      fullAges.push(false);
+    }
+  }
+  return fullAges
+}
+
+
+var years = [2015, 2001, 1995, 1948, 2008];
+var full_1 = printFullAge(years);
+var full_2 = printFullAge([2012, 1915, 1999]);
+
+*/
 
 
 
