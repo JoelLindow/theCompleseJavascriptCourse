@@ -86,28 +86,28 @@ var age = 26;
 var isMarried = 'no';
 
 if (isMarried === 'yes') {
-  console.log(name + ' is married!');
+console.log(name + ' is married!');
 } else {
-  console.log(name + ' will hopefully marry soon!');
+console.log(name + ' will hopefully marry soon!');
 }
 
 isMarried = false;
 
 if(isMarried) {
-  console.log('Yes!');
+console.log('Yes!');
 } else {
-  console.log('No!')
+console.log('No!')
 }
 
 if (23 == "23") {
-  console.log('Something to print...')
+console.log('Something to print...')
 }
 // == will allow Javascript to see 23 integer as '23' string. It allows "type conversion"
 
 if (23 === "23") {
-  console.log('Something to print...')
+console.log('Something to print...')
 } else {
-  console.log('That aint the same thing, dude')
+console.log('That aint the same thing, dude')
 }
 */
 /// === will not allow type conversion. Is strict down to datatype.
@@ -121,11 +121,11 @@ var age = 20;
 // age = prompt('what is Johns age?')
 
 if (age < 20) {
-  console.log('John is a teenager')
+console.log('John is a teenager')
 } else if (age >= 20 && age < 30) {
-  console.log('John is a young man')
+console.log('John is a young man')
 } else {
-  console.log('John is a man.')
+console.log('John is a man.')
 }
 
 var job = 'teacher';
@@ -133,24 +133,24 @@ var job = 'teacher';
 job = prompt('What does John do?');
 
 switch (job) {
-  case 'teacher':
-    console.log('John teaches kids.');
-    break;
-  case 'driver':
-    console.log('John drives a cab in Lisbon.');
-    break;
-  case 'cop':
-    console.log('John helps fight crime.');
-    break;
-  default:
-    console.log('John does something else.');
+case 'teacher':
+console.log('John teaches kids.');
+break;
+case 'driver':
+console.log('John drives a cab in Lisbon.');
+break;
+case 'cop':
+console.log('John helps fight crime.');
+break;
+default:
+console.log('John does something else.');
 }
 */
 // in switch statements you must manually tell it to break if
 // it hits the condition or it'll keep running through other optiong
 
 // Coding Challenge:
-
+/*
 var joelHeight = 75;
 var joelAge = 36;
 var angelaHeight = 63;
@@ -167,19 +167,102 @@ console.log(angelaScore + ': Angelas Score');
 console.log(jamesScore + ': James Score');
 
 if (joelScore > angelaScore && joelScore > jamesScore) {
-  console.log('Joel is the Winner!');
+console.log('Joel is the Winner!');
 } else if (angelaScore > joelScore && angelaScore > jamesScore) {
-  console.log('Angela is the Winner!');
+console.log('Angela is the Winner!');
 } else if (jamesScore > angelaScore && jamesScore > joelScore) {
-  console.log('James is the Winner!');
+console.log('James is the Winner!');
 }
 
+*/
 
+////////////////////////////////////////////////////
+// Lecture: Functions
+// Functions are like methods in Ruby. A machine that takes things in and puts out something new.
+// Helps you keep code DRY.
 
+// Calculate the year of birth using a Function
+/*
+function calculateAge(yearOfBirth) {
+  var age = 2016 - yearOfBirth;
+  return age;
+}
 
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1969);
+var ageMary = calculateAge(1948);
 
+console.log('John is ' + ageJohn);
+console.log('Mike is ' + ageMike);
+console.log('Mary is ' + ageMary);
 
+function yearsUntilRetirement(name, year) {
+  var age = calculateAge(year);
+  var retirement = 65 - age;
+  if (retirement >= 0 ) {
+    console.log(name + ' retires in ' + retirement + ' years.');
+  } else {
+    console.log(name + ' is already retired.');
+  }
+}
 
+yearsUntilRetirement('John', 1990);
+yearsUntilRetirement('Mike', 1969);
+yearsUntilRetirement('Mary', 1948);
+*/
+
+//////////////////////////////////////////////////////////////
+// Lecture: Statements and Expressions
+/*
+function someFunction(par) {
+  //code
+  //this is an expression
+}
+console.log(someFunction('cow'))
+
+var someFun = function(par) {
+  //code
+  //this is a statement. It holds the value in a variable.
+}
+*/
+
+/////////////////////////////////////////////////////////////
+// Lecture: Arrays
+/*
+var names = ['John', 'Jane', 'Mark'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]);
+names[1] = 'Ben';
+console.log(names);
+
+var john = ['John', 'Smith', 1990, 'Teacher', false]
+
+// push adds element to array at the end
+john.push('blue');
+console.log(john);
+
+// unshift adds element to front of array
+john.unshift('Mr.');
+console.log(john);
+
+// pop removes the last item in an array and returns the value
+john.pop();
+console.log(john);
+
+// shift removes the first item on an array and returns the value
+john.shift();
+console.log(john);
+
+// index of returns the index position of an array that matches the paramater
+console.log('Index Position is ' + john.indexOf('Smith'));
+
+if (john.indexOf('teacher') === -1) {
+  console.log('John is a teacher');
+} else {
+  console.log('John is NOT a teacher');
+};
+*/
 
 
 
