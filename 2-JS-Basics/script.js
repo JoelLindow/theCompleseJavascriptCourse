@@ -462,6 +462,23 @@ var full_2 = printFullAge([2012, 1915, 1999]);
 
 */
 
+/////////////////////////////////
+// Very Short History of JavaScript.
+//
+// Language was called LiveScript but changed to JavaScript to attract Java users
+// Has nothing to do with Java AT allow
+// 1997: ECMAScript 1 became the forst version of the JavaScript language standard
+// 2009: ECMAScript 5 (ES5) was released with lots of new features
+// 2015: ECMASctipt 2015 (ES6) was released. The biggest update ever.
+// New version will come out every year with new updates.
+// ES5 is now fully suppoerted by modern browsers.
+// ES2015 is still not totally compatible. IE, Safaru and Android aren't ready. Won't be someFunction
+// ES2016 is way uncompatible still but it's cool cause the feature changes are very minor.
+//
+// Why do we do ES5?
+// - Becasue most tutorials and code found online are in ES5
+// - Almost all older code bases are ES5 so it's more important to understand.
+
 
 
 
