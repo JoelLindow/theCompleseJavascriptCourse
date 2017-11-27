@@ -479,6 +479,152 @@ var full_2 = printFullAge([2012, 1915, 1999]);
 // - Becasue most tutorials and code found online are in ES5
 // - Almost all older code bases are ES5 so it's more important to understand.
 
+/*
+//////////////////////////////////////////
+// REVISITING LESSONS TO LOCK IN LEARNING
+//////////////////////////////////////////
+//////////////////////////////////////////
+// Lecture: Objects
+
+var john = {
+  name: 'John',
+  lastName: 'Smith',
+  yearOfBirth: 1990,
+  job: 'Teacher',
+  isMarried: false
+};
+
+console.log(john.lastName);
+console.log(john['lastName'])
+
+var xyz = 'job';
+console.log(john[xyz])
+
+var jane = new Object();
+
+console.log(jane);
+
+jane.name = 'Jane';
+jane.lastName = 'Smith';
+jane.yearOfBirth - 1969;
+jane.job = 'retired';
+jane.isMarried = true;
+
+console.log(jane);
+*/
+
+// freestyling a bit.
+/*
+var john = {
+  name: 'John',
+  lastName: 'Smith',
+  yearOfBirth: 1990,
+  job: 'Teacher',
+  isMarried: false,
+  family: ['Mike', 'Jane', 'Mark', 'Bob'],
+  calculateAge: function() {
+    this.age = (2016 - this.yearOfBirth);
+  },
+};
+
+john.calculateAge();
+
+console.log(john);
+*/
+
+//////////////////////////////////////////
+// REVISITING LESSONS TO LOCK IN LEARNING
+//////////////////////////////////////////
+//////////////////////////////////////////
+// Lecture: loops
+/*
+for (var i = 0; i < 6; i++) {
+  console.log(i + ' banana');
+}
+
+for (var i = 0; i < 6; i++) {
+  if ((i % 2) === 0 || i === 0) {
+    console.log(i + ' index is even');
+  } else {
+    console.log(i + ' index is odd')
+  }
+}
+
+for (var i = 0; i < 6; i++) {
+  if (((i + 1) % 2) === 0 || (i + 1) === 0) {
+    console.log('number ' + (i + 1) + ' is even');
+  } else {
+    console.log('number ' + (i + 1) + ' is odd')
+  }
+}
+
+var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob']
+
+for (var i = 0; i < names.length; i++) {
+  console.log(names[i] + ` is number ${i + 1}`);
+}
+
+for (var i = names.length - 1; i >= 0; i--) {
+  console.log('Backwards Order: ' + names[i])
+}
+
+var i = 0;
+while(i < names.length) {
+  console.log(names[i] + ' in the while loop');
+  i++;
+}
+
+array1 = ['Batman', 'Superman', 'Wonder Woman', 'Aquaman']
+array2 = ['Ironman', 'Hulk', 'Thor', 'Spiderman']
+
+function arraySearcher(arrayToProcess, searchingFor) {
+  for (var i = 0; i < arrayToProcess.length; i++) {
+    var resultText = 'Could Not Find ' + searchingFor
+    if (arrayToProcess[i] === searchingFor) {
+      resultText = ('Found ' + searchingFor);
+      break;
+    }
+  }
+  console.log(resultText)
+}
+
+arraySearcher(array1, 'Batman')
+arraySearcher(array2, 'Batman')
+*/
+
+//////////////////////////////////////////
+// REVISITING LESSONS TO LOCK IN LEARNING
+//////////////////////////////////////////
+//////////////////////////////////////////
+// Lecture: Loops
+/*
+var yearCollection = [1943, 2012, 2000, 1998, 1974]
+var agesCollection = []
+var ofAgeOrNot = []
+
+function ageGetter(currentYear) {
+  for (var i = 0; i < yearCollection.length; i++) {
+    agesCollection.push(currentYear - yearCollection[i]);
+  }
+}
+
+function trueOrFalse(collectionToProcess) {
+  for(var i = 0; i < collectionToProcess.length; i++) {
+    if (agesCollection[i] >= 18) {
+      ofAgeOrNot.push(true);
+    } else {
+      ofAgeOrNot.push(false);
+    }
+  }
+}
+ageGetter(2017);
+
+trueOrFalse(agesCollection);
+
+console.log(ofAgeOrNot)
+*/
+
+
 
 
 
