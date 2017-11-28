@@ -102,6 +102,10 @@ console.log(age);
 
 ///////////////////////////////////////
 // Lecture: Scoping
+// Scoping means: Where can we access a certain variable?
+// Each new function creates a scope. This space/environment, in which the variables it defines are accessable
+// Lexical Scoping: A function that is written within another function gets access to the scope of the outer function (parent function) and all variables and scope the parent function defines.
+
 
 
 // First scoping example
@@ -119,6 +123,7 @@ function first() {
         console.log(a + b + c);
     }
 }
+// will log Hello!Hi!Hey!
 */
 
 
@@ -143,9 +148,84 @@ function third() {
     var d = 'John';
     console.log(a + b + c + d);
 }
+
+// This obviously blows up!
+// third function is calling variables that are defined down in the lexical scope of first and second.
+// There's no way for the third function to access b or c!
+// Execution stack does not work with the scope chain!
+// third function can only access variable 'a' and 'd'
 */
 
 
 
 ///////////////////////////////////////
-// Lecture: The this keyword
+// Lecture: The 'this' keyword
+///////////////////////////////////////
+// The 'this' variable is a variable that each and every execution context arguments
+// It is stored in the execution context object. So where does it point?
+//  Regular Function Call: It points at the GLOBAL OBJECT or WINDOW OBJECT if it's in the global scope
+//  Method Call: 'this' points to the object that is calling the Method
+//  The 'this" keyword is not assigned a value until a function where it is defined is actually called
+
+// Let's Practice!
+
+
+// console.log(this);
+// shows the window object in console!
+/*
+calculateAge(1985);
+
+function calculateAge(year) {
+  console.log(2016 - year);
+  // logs the age
+  console.log(this);
+  // logs the window object again!
+}
+*/
+/*
+var john = {
+  name: 'John',
+  yearOfBirth: 1990,
+  calculateAge: function() {
+    console.log(this);
+    // logs john object
+    console.log(2016 - this.yearOfBirth);
+    // logs the age
+
+    function innerFunction() {
+      console.log(this);
+      // logs window object. Why?
+      // When a regular function call happens, it goes to the window object.
+      // Even though it's inside of an object, it's still just a function!
+    }
+    innerFunction();
+  }
+}
+
+john.calculateAge();
+*/
+/*
+///// Method Borrowing!
+
+var john = {
+  name: 'John',
+  yearOfBirth: 1990,
+  calculateAge: function() {
+    console.log(this);
+    // logs john object
+    console.log(2016 - this.yearOfBirth);
+    // logs the age
+  }
+}
+
+var mike = {
+  name: 'Mike',
+  yearOfBirth: 1984
+};
+
+mike.calculateAge = john.calculateAge;
+// this is method borrowing.
+mike.calculateAge();
+*/
+
+//
