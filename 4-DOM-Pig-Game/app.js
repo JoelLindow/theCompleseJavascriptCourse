@@ -22,7 +22,7 @@ document.getElementById('score-0').textContent = '0';
 document.getElementById('score-1').textContent = '0';
 document.getElementById('current-0').textContent = '0';
 document.getElementById('current-1').textContent = '0';
-// These will replace any existing HTML test with what we've designated in the code! WOOT! 
+// These will replace any existing HTML test with what we've designated in the code! WOOT!
 
 
 
@@ -39,15 +39,19 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
   diceDOM.src = 'dice-' + dice + '.png'
 
   // 3. Update the round score IF the rolled number was NOT a 1
+  if (dice !== 1) {
+    //Add Score
+    roundScore += dice;
+    document.querySelector('#current-' + activePlayer).textContent = roundScore;
 
+  } else {
+    //Next Player
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+    roundScore = 0;
+  }
 });
 // event listener has 2 arguments. Type of event and function that should be called when event happens
 // a CALLBACK function is a function passed into another function where an event calls it for us
-
-
-
-
-
 
 
 // document.querySelector('#current-' + activePlayer).textContent = dice;
