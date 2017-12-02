@@ -54,6 +54,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 // a CALLBACK function is a function passed into another function where an event calls it for us
 
 
+
 // document.querySelector('#current-' + activePlayer).textContent = dice;
 // we don't use textContent here becasue we can only do text. not html. We need the innerHtml method
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
