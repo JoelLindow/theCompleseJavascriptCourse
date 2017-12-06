@@ -24,8 +24,6 @@ document.getElementById('current-1').textContent = '0';
 // These will replace any existing HTML test with what we've designated in the code! WOOT!
 
 
-
-
 document.querySelector('.btn-roll').addEventListener('click', function() {
   // ANONYMOUS FUNCTION - A function that has no name that can not be resued!
 
