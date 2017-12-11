@@ -40,10 +40,13 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     // Add score
     roundScore += dice;
     document.querySelector('#current-' + activePlayer).textContent = roundScore;
+    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+    document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+    // Remember! We have add, remove and toggle
   } else {
     //Next player
     nextPlayer();
-
   }
 });
 
@@ -56,9 +59,13 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
   document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
   // Check if player won the Game
+  if (scores[activePlayer] >= 10) {
+    document.querySelector('#name-' + activePlayer).textContent = 'Winner';
+  } else {
 
-  // Next player
-  nextPlayer();
+    // Next player
+    nextPlayer();
+  }
 });
 
 
