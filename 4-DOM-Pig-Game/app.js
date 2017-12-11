@@ -42,21 +42,43 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     document.querySelector('#current-' + activePlayer).textContent = roundScore;
   } else {
     //Next player
-    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-    roundScore = 0;
-
-    document.getElementById('current-0').textContent = '0';
-    document.getElementById('current-1').textContent = '0';
-
-    // document.querySelector('.player-0-panel').classList.remove('active');
-    // document.querySelector('.player-1-panel').classList.add('active');
-    document.querySelector('.player-0-panel').classList.toggle('active');
-    document.querySelector('.player-1-panel').classList.toggle('active');
-
-    document.querySelector('.dice').style.display = 'none';
+    nextPlayer();
 
   }
 });
+
+document.querySelector('.btn-hold').addEventListener('click', function() {
+  // Add CURRENT score to GLOBAL score
+  scores[activePlayer] += roundScore;
+
+
+  // Update UI
+  document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+  // Check if player won the Game
+
+  // Next player
+  nextPlayer();
+});
+
+
+function nextPlayer() {
+  //Next player
+  activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+  roundScore = 0;
+
+  document.getElementById('current-0').textContent = '0';
+  document.getElementById('current-1').textContent = '0';
+
+  // document.querySelector('.player-0-panel').classList.remove('active');
+  // document.querySelector('.player-1-panel').classList.add('active');
+  document.querySelector('.player-0-panel').classList.toggle('active');
+  document.querySelector('.player-1-panel').classList.toggle('active');
+
+  document.querySelector('.dice').style.display = 'none';
+};
+
+
 // event listener has 2 arguments. Type of event and function that should be called when event happens
 // a CALLBACK function is a function passed into another function where an event calls it for us
 
