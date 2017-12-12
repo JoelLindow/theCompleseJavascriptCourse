@@ -33,7 +33,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     } else {
       //Next player
       nextPlayer();
-    // }
+    }
 
     lastDice = dice;
   }
